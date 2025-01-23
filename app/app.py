@@ -42,7 +42,8 @@ class App:
                     self._update(venster, 'NIEUW', self._contactLijst.nieuw(), self._contactLijst)
 
                 case '-LBX-CONTACTEN-':
-                    self._update(venster, 'BEWERK', vals['-LBX-CONTACTEN-'][0], self._contactLijst)
+                    if len(vals['-LBX-CONTACTEN-']) > 0:
+                        self._update(venster, 'BEWERK', vals['-LBX-CONTACTEN-'][0], self._contactLijst)
 
         venster.close()
 
